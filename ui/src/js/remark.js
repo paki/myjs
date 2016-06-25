@@ -1,16 +1,17 @@
 'use strict';
 const app = angular.module('app');
 
-app.controller('RemarkCtrl', ['$scope', 'Socket', ($scope, Socket) => {
+app.controller('RemarkCtrl', ['$scope', 'socket', ($scope, socket) => {
+
     $scope.remarks = [];
 
     $scope.send = () => {
-        Socket.emit('chat message', $scope.newRemark);
+        socket.emit('chat message', $scope.newRemark);
         $scope.newRemark = '';
         return false;
     };
 
-    Socket.on('chat message', (msg) => {
+    socket.on('chat message', (msg) => {
         $scope.remarks.push(msg);
     });
 

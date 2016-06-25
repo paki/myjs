@@ -2,7 +2,7 @@
 const io = require('socket.io-client');
 const app = angular.module('app');
 
-app.factory('Socket', ($rootScope) => {
+app.factory('socket', ($rootScope) => {
 
     let socket = io.connect();
     return {

@@ -6,11 +6,8 @@ module.exports = function(config) {
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
             'node_modules/angular-route/angular-route.js',
-
             'node_modules/socket.io-client/socket.io.js',
-
-
-            'node_modules/karma-read-json/karma-read-json.js',
+            // 'node_modules/karma-read-json/karma-read-json.js',
             'src/js/main.js',
             'src/**/!(bundle-node-modules).js',
             'test/**/*.spec.js',
